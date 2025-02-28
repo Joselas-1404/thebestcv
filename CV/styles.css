@@ -1,0 +1,139 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ececec; /* Fondo más neutro para un toque serio */
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Contenedor del CV */
+.container {
+    background-color: #ffffff;
+    width: 750px;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada para resaltar */
+    color: #333;
+    transition: transform 0.5s ease-in-out; /* Añadido para la transición de entrada */
+}
+
+/* Efecto de transición en la carga del contenedor */
+body.loaded .container {
+    transform: translateY(0); /* Desplazamiento al cargar */
+}
+
+body {
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Transición general */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo de la cabecera */
+.header h1,
+.header h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #2c3e50; /* Color serio y oscuro */
+    margin-bottom: 10px;
+}
+
+.header p {
+    text-align: center;
+    font-size: 14px;
+    color: #7f8c8d; /* Gris suave */
+    line-height: 1.6;
+}
+
+/* Estilo de las secciones */
+section h2 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-top: 25px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #2c3e50; /* Línea de separación fina y elegante */
+    margin-bottom: 15px;
+}
+
+/* Estilo de los párrafos */
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+/* Estilo de la imagen */
+.photo img {
+    width: 120px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 15px auto;
+    display: block;
+    border: 3px solid #2c3e50; /* Borde sutil y profesional */
+}
+
+/* Líneas de separación personalizadas */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #bdc3c7; /* Línea suave de separación */
+    margin: 25px 0;
+}
+
+/* Efectos de hover sobre los párrafos */
+section p:hover {
+    background-color: #f5f5f5; /* Fondo suave al pasar el ratón */
+    transition: background-color 0.3s ease;
+}
+
+/* Efectos de hover en la imagen */
+.photo img:hover {
+    transform: scale(1.05); /* Zoom suave sobre la imagen */
+    transition: transform 0.3s ease;
+}
+
+/* Texto centrado */
+.center {
+    text-align: center;
+}
+
+/* Transiciones y animaciones */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+h2 {
+    position: relative;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Efecto de fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
